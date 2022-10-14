@@ -17,17 +17,13 @@ else:
 
 # 2. Напишите программу для проверки истинности утверждения ¬(X ⋁ Y ⋁ Z) = ¬X ⋀ ¬Y ⋀ ¬Z для всех значений предикат.
 
-X = int(input('Введите значение X: '))
-Y = int(input('Введите значение Y: '))
-Z = int(input('Введите значение Z: '))
-
-left = not (X or Y or Z)
-right = not X and not Y and not Z
-
-if left == right:
-    print('Утверждение истинно!')
-else:
-    print('Утверждение ложно!')
+print('X | Y | Z | ¬(X ⋁ Y ⋁ Z) = ¬X ⋀ ¬Y ⋀ ¬Z')
+for x in [0, 1]:
+    for y in [0, 1 ]:
+        for z in [0, 1]:
+            left = not (x or y or z)
+            right = not x and not y and not z
+            print(f'{x} | {y} | {z} | {int(left == right)}')
 
 
 # 3. Напишите программу, которая принимает на вход координаты точки (X и Y),
