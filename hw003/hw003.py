@@ -58,16 +58,16 @@ print(f'Разница между максимальным ({max(list_after_dot)
 # - 2 -> 10
 
 
-n = int(input('Введите десятичное число для перевода в двоичное: '))
+def ConvertToBinary(number):
+    result = ''
+    if number == 0:
+        result = '0'
+    while number > 0:
+        result = str(number%2) + result
+        number //= 2
+    return result
 
-doubled_n = ''
-
-while n//2 >= 1:
-    doubled_n += str(n%2)
-    n = n//2
-    if n == 1:
-        doubled_n += '1'
-print(''.join(reversed(doubled_n)))
+print(ConvertToBinary(int(input('Введите десятичное число для перевода в двоичное: '))))
 
 
 # Задайте число. Составьте список чисел Фибоначчи, в том числе для отрицательных индексов.
