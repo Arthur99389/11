@@ -96,3 +96,4 @@ result = dict([key, pol_second[key] + pol_first[key]] for key in pol_first.keys(
 print(result)
 for key in result.keys():
     print(f'{result[key]}x{key}', end='+')
+# Задача - сформировать файл, содержащий сумму многочленов.
